@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: daveingapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: daveingapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: daveingapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: daveingapipelinesjavascriptdocker 
+          image: coldcontactregistry.azurecr.io/daveingapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
